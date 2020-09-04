@@ -41,16 +41,16 @@ current_year = d.year
 calendar.setfirstweekday(6)
 
 if len(sys.argv) == 3:
-    month = sys.argv[1]
-    year = sys.argv[2]
-    print_calendar(int(month), int(year))
+    month = int(sys.argv[1])
+    year = int(sys.argv[2])
+    print_calendar(month, year)
 elif len(sys.argv) == 2:
-    month = sys.argv[1]
+    month = int(sys.argv[1])
     year = current_year
-    print_calendar(int(month), int(year))
+    print_calendar(month, year)
 elif len(sys.argv) == 1:
     month = current_month
     year = current_year
-    print_calendar(int(month), int(year))
+    print_calendar(month, year)
 else:
     print("Please enter '14_cal.py [month] [year]'")
