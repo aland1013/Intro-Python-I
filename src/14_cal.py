@@ -31,9 +31,6 @@ import sys
 import calendar
 from datetime import datetime
 
-def print_calendar(month, year):
-    calendar.prmonth(year, month)
-
 d = datetime.now()
 current_month = d.month
 current_year = d.year
@@ -43,14 +40,14 @@ calendar.setfirstweekday(6)
 if len(sys.argv) == 3:
     month = int(sys.argv[1])
     year = int(sys.argv[2])
-    print_calendar(month, year)
+    calendar.prmonth(year, month)
 elif len(sys.argv) == 2:
     month = int(sys.argv[1])
     year = current_year
-    print_calendar(month, year)
+    calendar.prmonth(year, month)
 elif len(sys.argv) == 1:
     month = current_month
     year = current_year
-    print_calendar(month, year)
+    calendar.prmonth(year, month)
 else:
     print("Please enter '14_cal.py [month] [year]'")
