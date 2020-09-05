@@ -11,7 +11,6 @@ else:
         print('Please include a number larger than 1 to evaluate')
     
     else:
-
         primes = {}
         
         for i in range(2, num + 1):
